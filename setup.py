@@ -1,4 +1,5 @@
 from numpy.distutils.core import Extension
+from setuptools import setup
 
 long_description = """
 A numpy binding for the Poisson E-Test, described in this paper:
@@ -16,19 +17,14 @@ fortran_ext = Extension(
     "poisson_etest.poisson_etest_fortran", sources=["lib/poisson_etest.f"]
 )
 
-if __name__ == "__main__":
-    from numpy.distutils.core import setup
-
-    setup(
-        name="poisson_etest",
-        version="0.0",
-        url="https://github.com/nolanbconaway/poisson-etest",
-        packages=["poisson_etest"],
-        author="Nolan Conaway",
-        author_email="nolanbconaway@gmail.com",
-        description="A poisson e-test.",
-        keywords=["poisson", "hypothesis testing", "statistics"],
-        long_description=long_description,
-        ext_modules=[fortran_ext],
-        package_dir={"poisson_etest": "lib"},
-    )
+setup(
+    name="poisson_etest",
+    version="0.1",
+    url="https://github.com/NickHilton/poisson-etest",
+    packages=["poisson_etest"],
+    description="A poisson e-test.",
+    long_description=long_description,
+    ext_modules=[fortran_ext],
+    package_dir={"poisson_etest": "lib"},
+    install_requires=["numpy>=1.17.0,<2"]
+)
