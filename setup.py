@@ -10,7 +10,7 @@ or via this link:
 http://www.ucs.louisiana.edu/~kxk4695/statcalc/pois2pval.for
 """
 
-def run_install()
+def run_install():
     from numpy.distutils.core import setup, Extension
     fortran_ext = Extension(
         "poisson_etest.poisson_etest_fortran", sources=["lib/poisson_etest.f"]
