@@ -1,5 +1,4 @@
-from numpy.distutils.core import Extension
-from setuptools import setup
+from setuptools import setup, Extension
 
 long_description = """
 A numpy binding for the Poisson E-Test, described in this paper:
