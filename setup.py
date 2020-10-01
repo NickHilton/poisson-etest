@@ -1,5 +1,5 @@
 from setuptools import dist
-dist.Distribution().fetch_build_eggs(['numpy>=1.17'])
+dist.Distribution().fetch_build_eggs(['numpy>=1.17.0,<2'])
 
 long_description = """
 A numpy binding for the Poisson E-Test, described in this paper:
