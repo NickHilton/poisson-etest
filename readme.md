@@ -16,11 +16,17 @@ One day I'll fix these issues by reimplementing in pure python, assuming that do
 
 ## Install
 
-Numpy is a requirement for poisson-etest, so make sure that's installed first. Then:
-
 ```sh
 pip install poisson-etest
 ```
+
+You need a fortran compiler to install this, you can use brew to install via
+```sh
+brew install gcc
+```
+
+_Note: If you get a compile error this could be because of a numpy distutils bug, in that case set the ENV var `NPY_DISTUTILS_APPEND_FLAGS=1` to address
+
 ## Usage
 
 Test whether two samples of Poisson data were drawn from the same distribution.
